@@ -31,13 +31,13 @@ class TestTriangles(unittest.TestCase):
         """ Test if the function can handle invalid input """
 
         # check for invalid value of length
-        self.assertEqual(classifyTriangle(-1, 2, 3), 'NotATriangle')
-        self.assertEqual(classifyTriangle(1, 0, 3), 'NotATriangle')
-        self.assertEqual(classifyTriangle(3, 2, 3.2), 'NotATriangle')
+        self.assertEqual(classifyTriangle(-1, 2, 3), 'InvalidInput')
+        self.assertEqual(classifyTriangle(1, 0, 3), 'InvalidInput')
+        self.assertEqual(classifyTriangle(3, 2, 3.2), 'InvalidInput')
         self.assertEqual(classifyTriangle(1, 2, 3), 'NotATriangle')
         self.assertEqual(classifyTriangle(3, 2, 6), 'NotATriangle')
         self.assertEqual(classifyTriangle(6, 2, 3), 'NotATriangle')
-        self.assertEqual(classifyTriangle(201, 201, 201), 'NotATriangle')
+        self.assertEqual(classifyTriangle(201, 201, 201), 'InvalidInput')
 
         # check for string input
         self.assertEqual(classifyTriangle("a", 2, 3), "InvalidInput")
